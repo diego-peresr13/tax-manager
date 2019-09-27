@@ -1,4 +1,6 @@
-venv/
-/venv/
+.idea
+*.sqlite3
 venv
-*.sqllite3
+*.pyc
+tax_manager/__pycache__/
+media
