@@ -1,0 +1,31 @@
+{% extends 'books/base.html' %} {% load static %} {% block content %}
+<h1 class="page-header">Books</h1>
+
+<p>
+    <button type="button" class="btn btn-primary js-create-book" data-url="{% url 'book_create' %}">
+            <i class="fa fa-file" aria-hidden="true"></i> New book
+        </button>
+</p>
+
+<table class="table" id="book-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Type</th>
+            <th>Publication date</th>
+            <th>Pages</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% include 'books/partial_book_list.html' %}
+    </tbody>
+</table>
+<div class="modal fade" id="modal-book">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+    {% endblock %}
